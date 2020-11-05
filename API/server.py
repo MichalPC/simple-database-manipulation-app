@@ -24,6 +24,10 @@ app.add_middleware(
 async def root():
     return {"message": "Hello World"}
 
+@app.get("/exists/")
+async def usernameEmpty():
+    return {"err": "No username provided"}
+
 @app.get("/exists/{username}")
 async def userExists(username):
     userExists = collection.find({"username": username})
