@@ -10,7 +10,10 @@ function App() {
         <h1 className="Header-text">Hello DB World</h1>
       </header>
       <main className="Main-container">
-        
+        <Switch>
+          <Route exact path='/' component={Login} />
+          <Route path='/home' component={Home} />
+        </Switch>
       </main>
     </div>
   );
