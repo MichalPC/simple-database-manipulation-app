@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import React, { useState } from 'react';
 
 function Login() {
+  const [curUsername, setCurUsername] = useState('')
+  
   return (
     <div className="Login">
       <main className="Login-container">
