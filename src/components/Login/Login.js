@@ -1,10 +1,11 @@
 import './Login.css';
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import React, { useState } from 'react';
 
 function Login() {
   const [curUsername, setCurUsername] = useState('')
   const [curPassword, setCurPassword] = useState('')
+  const history = useHistory();
 
   const setUsername= (e) => {
     setCurUsername(e.target.value)
@@ -15,8 +16,11 @@ function Login() {
   }
 
   const checkLogin = (e) => {
-
-    e.preventDefault();
+    if (curUsername === 'logged' && curPassword === 'in') {
+      history.push('/home')
+    } else {
+      console.log('try again')
+    }
   }
 
   return (
