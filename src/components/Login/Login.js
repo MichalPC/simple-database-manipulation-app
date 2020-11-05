@@ -16,11 +16,19 @@ function Login() {
   }
 
   const checkLogin = (e) => {
-    if (curUsername === 'logged' && curPassword === 'in') {
-      history.push('/home')
-    } else {
-      console.log('try again')
-    }
+    fetch(`http://127.0.0.1:8000/exists/${curUsername}`)
+    .then(result => result.json())
+    .then(result => {
+      if (result.err){
+        console.log(result.err)
+      }else {
+        if(result.exists) {
+          history.push('/home')
+        } else {
+          console.log('Try again')
+        }
+      }
+    })
   }
 
   return (
