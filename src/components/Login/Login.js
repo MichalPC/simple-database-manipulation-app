@@ -10,6 +10,10 @@ function Login() {
     setCurUsername(e.target.value)
   }
 
+  const setPassword= (e) => {
+    setCurPassword(e.target.value)
+  }
+
   return (
     <div className="Login">
       <main className="Login-container">
