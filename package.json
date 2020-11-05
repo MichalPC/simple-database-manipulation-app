@@ -1,5 +1,5 @@
 {
-  "name": "simple-database-manipulation-app",
+  "name": "simple-user-login-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
