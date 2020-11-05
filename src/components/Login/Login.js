@@ -14,13 +14,18 @@ function Login() {
     setCurPassword(e.target.value)
   }
 
+  const checkLogin = (e) => {
+
+    e.preventDefault();
+  }
+
   return (
     <div className="Login">
       <main className="Login-container">
         <form className="Login-form">
           <input type="text" value={curUsername} onChange={setUsername}></input>
           <input className="Password-input"type="text" value={curPassword} onChange={setPassword}></input>
-          <button type='submit'>Login</button>
+          <button type='button' onSubmit={checkLogin}>Login</button>
         </form>
         <Link className='Login-button' to={'/home'} className="nav-link"> Login </Link>
       </main>
