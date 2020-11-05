@@ -4,7 +4,7 @@ function Home() {
   return (
     <div className="Home">
       <main className="Home-container">
-        Login Screen
+        Home Screen
       </main>
     </div>
   );
