@@ -25,7 +25,7 @@ function Login() {
         <form className="Login-form">
           <input type="text" value={curUsername} onChange={setUsername}></input>
           <input className="Password-input"type="text" value={curPassword} onChange={setPassword}></input>
-          <button type='button' onSubmit={checkLogin}>Login</button>
+          <button type='button' onClick={checkLogin} >Login</button>
         </form>
         <Link className='Login-button' to={'/home'} className="nav-link"> Login </Link>
       </main>
