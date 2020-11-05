@@ -6,6 +6,10 @@ function Login() {
   const [curUsername, setCurUsername] = useState('')
   const [curPassword, setCurPassword] = useState('')
 
+  const setUsername= (e) => {
+    setCurUsername(e.target.value)
+  }
+
   return (
     <div className="Login">
       <main className="Login-container">
