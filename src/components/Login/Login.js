@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 
 function Login() {
   const [curUsername, setCurUsername] = useState('')
-  
+  const [curPassword, setCurPassword] = useState('')
+
   return (
     <div className="Login">
       <main className="Login-container">
