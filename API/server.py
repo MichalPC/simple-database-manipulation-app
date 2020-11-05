@@ -23,3 +23,10 @@ app.add_middleware(
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
+@app.get("/exists/{username}")
+async def userExists(username):
+    userExists = collection.find({"username": username})
+    if(userExists.count() == 1):
+        return {"exists": True}
+    return {"exists": False}
