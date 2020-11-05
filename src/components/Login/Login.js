@@ -5,7 +5,12 @@ function Login() {
   return (
     <div className="Login">
       <main className="Login-container">
-        Login Screen
+        <form className="Login-form">
+          <input type="text"></input>
+          <input className="Password-input"type="text"></input>
+          <button type='submit'>Login</button>
+        </form>
+        <Link className='Login-button' to={'/home'} className="nav-link"> Login </Link>
       </main>
     </div>
   );
