@@ -18,7 +18,7 @@ function Login() {
     <div className="Login">
       <main className="Login-container">
         <form className="Login-form">
-          <input type="text"></input>
+          <input type="text" value={curUsername} onChange={setUsername}></input>
           <input className="Password-input"type="text"></input>
           <button type='submit'>Login</button>
         </form>
