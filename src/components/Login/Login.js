@@ -16,13 +16,13 @@ function Login() {
   }
 
   const checkLogin = (e) => {
-    fetch(`http://127.0.0.1:8000/exists/${curUsername}`)
+    fetch(`http://127.0.0.1:8000/login/${curUsername}/${curPassword}`)
     .then(result => result.json())
     .then(result => {
       if (result.err){
         console.log(result.err)
       }else {
-        if(result.exists) {
+        if(result.login){
           history.push('/home')
         } else {
           console.log('Try again')
