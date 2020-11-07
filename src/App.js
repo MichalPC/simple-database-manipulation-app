@@ -2,6 +2,7 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Login} />
           <Route path='/home' component={Home} />
+          <Route path='/signup' component={SignUp} />
         </Switch>
       </main>
     </div>
