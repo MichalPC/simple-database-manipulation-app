@@ -31,6 +31,10 @@ class User(BaseModel):
     username: str
     password: str
 
+class NewUser(BaseModel):
+    username: str
+    password: str
+
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
