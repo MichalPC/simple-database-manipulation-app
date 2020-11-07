@@ -7,6 +7,32 @@ function SignUp() {
     const [curPassword, setCurPassword] = useState('')
     const history = useHistory();
 
+    const signUp = () => {
+        fetch('http://127.0.0.1:8000/signup', {
+            method: 'POST',
+            headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            username: curUsername,
+            password: curPassword,
+        })
+    })
+    .then(result => result.json())
+    .then(result => {
+      if (result.err){
+        console.log(result.err)
+      }else {
+        if(result.signup){
+          history.push('/login')
+        } else {
+          console.log('Try again')
+        }
+      }
+    })
+    }
+
     return (
         <div className="SignUp">
             <main className="SignUp-container">
