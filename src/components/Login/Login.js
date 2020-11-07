@@ -35,8 +35,8 @@ function Login() {
     <div className="Login">
       <main className="Login-container">
         <form className="Login-form">
-          <input type="hidden" className="User-input" value={curUsername} onChange={setUsername}></input>
-          <input type="hidden" className="Password-input"  value={curPassword} onChange={setPassword}></input>
+          <input type="text" className="User-input" value={curUsername} onChange={setUsername}></input>
+          <input type="text" className="Password-input"  value={curPassword} onChange={setPassword}></input>
           <button type='button' onClick={checkLogin} >Login</button>
         </form>
         <Link className='Login-button' to={'/home'}> Login </Link>
