@@ -1,4 +1,5 @@
 import './SignUp.css';
+import '../../App.css'
 import { Link, useHistory } from 'react-router-dom'
 import React, { useState } from 'react';
 
