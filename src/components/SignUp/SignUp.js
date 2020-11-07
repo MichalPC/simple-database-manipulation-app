@@ -13,24 +13,24 @@ function SignUp() {
             headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            username: curUsername,
-            password: curPassword,
+            },
+            body: JSON.stringify({
+                username: curUsername,
+                password: curPassword,
+            })
         })
-    })
-    .then(result => result.json())
-    .then(result => {
-      if (result.err){
-        console.log(result.err)
-      }else {
-        if(result.signup){
-          history.push('/login')
-        } else {
-          console.log('Try again')
+        .then(result => result.json())
+        .then(result => {
+        if (result.err){
+            console.log(result.err)
+        }else {
+            if(result.signup){
+            history.push('/login')
+            } else {
+            console.log('Try again')
+            }
         }
-      }
-    })
+        })
     }
 
     return (
