@@ -46,16 +46,6 @@ async def userExists(username):
         return {"exists": True}
     return {"exists": False}
 
-@app.get("/login/{username}/{password}")
-async def userLogin(username, password):
-    userExists = collection.find({"username": username})
-
-    if(userExists.count() == 1):
-        if(userExists[0]['password'] == password):
-            return {"login": True}
-    return {"login": False,
-            "err": "Details provided were incorrect"}
-
 @app.post("/login/")
 async def login(user: User):
     userExists = collection.find({"username": user.username})
