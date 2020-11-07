@@ -25,7 +25,7 @@ function SignUp() {
             console.log(result.err)
         }else {
             if(result.signup){
-            history.push('/login')
+            history.push('/')
             } else {
             console.log('Try again')
             }
