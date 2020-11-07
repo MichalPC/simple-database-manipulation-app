@@ -13,9 +13,11 @@ function SignUp() {
                 <form className="SignUp-form">
                     <input type="text" className="User-input" value={curUsername} onChange={setUsername}></input>
                     <input type="text" className="Password-input"  value={curPassword} onChange={setPassword}></input>
-                    <button type='button' onClick={}>Sign Up</button>
+                    <button type='button'>Sign Up</button>
                 </form>
             </main>
         </div>
     );
 }
+
+export default SignUp;
