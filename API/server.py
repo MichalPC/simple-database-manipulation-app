@@ -55,3 +55,13 @@ async def userLogin(username, password):
             return {"login": True}
     return {"login": False,
             "err": "Details provided were incorrect"}
+
+@app.post("/login/")
+async def login(user: User):
+    userExists = collection.find({"username": user.username})
+
+    if(userExists.count() == 1):
+        if(userExists[0]['password'] == user.password):
+            return {"login": True}
+    return {"login": False,
+            "err": "Details provided were incorrect"}
