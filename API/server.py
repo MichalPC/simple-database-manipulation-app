@@ -53,9 +53,10 @@ async def userExists(username):
 @app.post("/login/")
 async def login(user: User):
     userExists = collection.find({"username": user.username})
-
+    
     if(userExists.count() == 1):
-        if(userExists[0]['password'] == user.password):
+        encodedPassword = user.password.encode('utf-8')
+        if(bcrypt.checkpw(encodedPassword, userExists[0]['password'])):
             return {"login": True}
     return {"login": False,
             "err": "Details provided were incorrect"}
