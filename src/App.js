@@ -10,8 +10,8 @@ function App() {
       <header className="Header-container">
         <div className="Header-text">Hello DB World
           <div className='Button-container'>
-              <Link className='SignUp-button' to={'/signup'}> Sign Up </Link>
-              <Link className='Login-button' to={'/home'}> Login </Link>
+              <Link className='Link-button' to={'/signup'}> Sign Up </Link>
+              <Link className='Link-button' to={'/home'}> Login </Link>
           </div>
         </div>
       </header>
