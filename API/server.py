@@ -1,7 +1,14 @@
+#pylint: disable=no-name-in-module
+#pylint: disable=no-self-argument
+
 from fastapi import FastAPI
 from pymongo import MongoClient
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 import pprint
+import bcrypt
+import base64
+import hashlib
 
 #VERY UNSAFE#
 client = MongoClient("mongodb+srv://michalpc:test1234@simple-user-login-app-d.ki5ky.mongodb.net/db?retryWrites=true&w=majority")
