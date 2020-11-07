@@ -11,7 +11,7 @@ function SignUp() {
         <div className="SignUp">
             <main className="SignUp-container">
                 <form className="SignUp-form">
-                    <input type="text" className="User-input" value={curUsername} onChange={setUsername}></input>
+                    <input type="text" className="User-input" value={curUsername} onChange={(e) => {setCurUsername(e.target.value)}}></input>
                     <input type="text" className="Password-input"  value={curPassword} onChange={setPassword}></input>
                     <button type='button'>Sign Up</button>
                 </form>
