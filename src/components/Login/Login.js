@@ -15,8 +15,18 @@ function Login() {
     setCurPassword(e.target.value)
   }
 
-  const checkLogin = (e) => {
-    fetch(`http://127.0.0.1:8000/login/${curUsername}/${curPassword}`)
+  const checkLogin = () => {
+    fetch('http://127.0.0.1:8000/login', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username: curUsername,
+        password: curPassword,
+      })
+    })
     .then(result => result.json())
     .then(result => {
       if (result.err){
