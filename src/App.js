@@ -11,8 +11,16 @@ function App() {
         <div className="Header-text">
           <h1>Simple DB App</h1>
           <div className='Button-container'>
-              <Link className='Link-button' to={'/signup'}> Sign Up </Link>
-              <Link className='Link-button' to={'/home'}> Login </Link>
+              <Link className='Link-button' to={'/signup'}> 
+              <button>
+                  <p>Sign Up</p>
+                </button> 
+              </Link>
+              <Link className='Link-button' to={'/home'}> 
+                <button>
+                  <p>Login</p>
+                </button> 
+              </Link>
           </div>
         </div>
       </header>
