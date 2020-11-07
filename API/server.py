@@ -70,6 +70,6 @@ async def signUp(newUser: NewUser):
     else:
         collection.insert({
             "username": newUser.username,
-            "password": newUser.password
+            "password": bcrypt.hashpw(newUser.password.encode("utf-8"), bcrypt.gensalt(12))
         })
         return {"signup": True}
