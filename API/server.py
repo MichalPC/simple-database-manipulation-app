@@ -59,3 +59,17 @@ async def login(user: User):
             return {"login": True}
     return {"login": False,
             "err": "Details provided were incorrect"}
+
+@app.post("/signup/")
+async def signUp(newUser: NewUser):
+    userExists = collection.find({"username": newUser.username})
+
+    if(userExists.count() == 1):
+        return {"signup": False,
+            "err": "Username already exists"}
+    else:
+        collection.insert({
+            "username": newUser.username,
+            "password": newUser.password
+        })
+        return {"signup": True}
