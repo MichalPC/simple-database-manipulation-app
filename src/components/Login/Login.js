@@ -34,7 +34,7 @@ function Login() {
         console.log(result.err)
       }else {
         if(result.login){
-          history.push('/home')
+          console.log('Successful Login!')
         } else {
           console.log('Try again')
         }
