@@ -49,6 +49,7 @@ function Login() {
           <input type="text" className="Password-input"  value={curPassword} onChange={setPassword}></input>
           <button type='button' onClick={checkLogin} >Login</button>
         </form>
+        <Link className='SignUp-button' to={'/signup'}> Sign Up </Link>
         <Link className='Login-button' to={'/home'}> Login </Link>
       </main>
     </div>
