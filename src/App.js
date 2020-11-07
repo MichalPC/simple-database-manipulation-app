@@ -12,8 +12,8 @@ function App() {
       </header>
       <main className="Main-container">
         <Switch>
-          <Route exact path='/' component={Login} />
-          <Route path='/home' component={Home} />
+          <Route exact path='/login' component={Login} />
+          <Route path='/' component={Home} />
           <Route path='/signup' component={SignUp} />
         </Switch>
       </main>
