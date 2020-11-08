@@ -16,7 +16,7 @@ function App() {
                   <p>Sign Up</p>
                 </button> 
               </Link>
-              <Link className='Link-button' to={'/home'}> 
+              <Link className='Link-button' to={'/login'}> 
                 <button>
                   <p>Login</p>
                 </button> 
