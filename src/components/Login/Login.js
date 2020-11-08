@@ -1,7 +1,7 @@
 import './Login.css';
 import '../../App.css'
 import { Link, useHistory } from 'react-router-dom'
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 function Login() {
   const [curUsername, setCurUsername] = useState('')
