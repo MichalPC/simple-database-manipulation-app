@@ -9,7 +9,9 @@ function App() {
     <div className="App">
       <header className="Header-container">
         <div className="Header-text">
-          <h1>Simple DB App</h1>
+          <Link className='Link-button' to={'/'}> 
+            <h1>Simple DB App</h1>
+          </Link>
           <div className='Button-container'>
               <Link className='Link-button' to={'/signup'}> 
               <button>
