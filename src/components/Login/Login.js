@@ -52,7 +52,7 @@ function Login() {
           <input type="text" className="User-input" value={curUsername} onChange={setUsername}></input>
           <label className="Input-label">Password</label>
           <input type="password" className="Password-input"  value={curPassword} onChange={setPassword}></input>
-          <label className="Error-label"></label>
+          <label ref={errorLabel} className="Error-label"></label>
           <button type='button' onClick={checkLogin} >Login</button>
         </form>
       </main>
