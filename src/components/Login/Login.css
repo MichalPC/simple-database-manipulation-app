@@ -3,3 +3,67 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.Login {
+    width: 100%;
+}
+
+.Login-container {
+    border-radius: 15px;
+    margin: 8rem auto 3.5rem auto;
+    padding: 25px;
+    background-color: chocolate;
+    width: 750px;
+    height: 550px;
+}
+
+.Login-container h1 {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.Login-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.Input-label {
+    padding-left: 25px;
+    margin: 50px 0 0 0;
+    align-self: flex-start;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.Login-form input {
+    border: none;
+    text-decoration: none;
+    outline: none;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 15px;
+    height: 45px;
+}
+
+.Login-form button {
+    cursor: pointer;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    align-self: center;
+    width: 50%;
+    margin-top: 90px;
+    height: 45px;
+}
+
+.Error-label {
+    height: 15px;
+    color: purple;
+    align-self: start;
+    margin-top: 20px;
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 500;
+}
