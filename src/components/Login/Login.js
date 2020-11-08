@@ -33,6 +33,7 @@ function Login() {
     .then(result => result.json())
     .then(result => {
       if (result.err){
+        setError(result.err)
         console.log(result.err)
       }else {
         if(result.login){
