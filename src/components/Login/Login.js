@@ -46,6 +46,7 @@ function Login() {
     <div className="Login">
       <main className="Login-container">
         <form className="Login-form">
+          <h1>Log in below</h1>
           <label className="Input-label">Username</label>
           <input type="text" className="User-input" value={curUsername} onChange={setUsername}></input>
           <label className="Input-label">Password</label>
