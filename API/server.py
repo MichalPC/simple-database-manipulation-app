@@ -58,8 +58,6 @@ async def login(user: User):
         encodedPassword = user.password.encode('utf-8')
         if(bcrypt.checkpw(encodedPassword, userExists[0]['password'])):
             return {"login": True}
-    return {"login": False,
-            "err": "Details provided were incorrect"}
 
 @app.post("/signup/")
 async def signUp(newUser: NewUser):
