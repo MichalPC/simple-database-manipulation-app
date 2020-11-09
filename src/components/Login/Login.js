@@ -47,12 +47,12 @@ function Login() {
 
   return (
     <div className="Login">
-      <main className="Login-container">
-        <form className="Login-form">
+      <main className="Form-container">
+        <form className="Form">
           <h1>Log in below</h1>
-          <label className="Input-label">Username</label>
+          <label className="Form-label">Username</label>
           <input type="text" className="User-input" value={curUsername} onChange={setUsername}></input>
-          <label className="Input-label">Password</label>
+          <label className="Form-label">Password</label>
           <input type="password" className="Password-input"  value={curPassword} onChange={setPassword}></input>
           <label ref={errorLabel} className="Error-label"></label>
           <button type='button' onClick={checkLogin} >Login</button>
