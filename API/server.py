@@ -58,6 +58,7 @@ async def login(user: User):
         encodedPassword = user.password.encode('utf-8')
         if(bcrypt.checkpw(encodedPassword, userExists[0]['password'])):
             return {"login": True}
+    raise HTTPException(status_code=401, detail="Provided details are incorrect!")
 
 @app.post("/signup/")
 async def signUp(newUser: NewUser):
