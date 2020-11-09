@@ -6,6 +6,7 @@ import React, { useState, useRef } from 'react';
 function SignUp() {
     const [curUsername, setCurUsername] = useState('')
     const [curPassword, setCurPassword] = useState('')
+    const errorLabel = useRef()
     const history = useHistory();
 
     const signUp = () => {
