@@ -32,9 +32,9 @@ function Login() {
     })
     .then(result => result.json())
     .then(result => {
-      if (result.err){
-        setError(result.err)
-        console.log(result.err)
+      if (result.detail){
+        setError(result.detail)
+        console.log(result.detail)
       }else {
         if(result.login){
           console.log('Successful Login!')
