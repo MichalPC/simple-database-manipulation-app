@@ -43,6 +43,7 @@ function SignUp() {
                     <input type="text" className="User-input" value={curUsername} onChange={(e) => {setCurUsername(e.target.value)}}></input>
                     <label className="Form-label">Password:</label>
                     <input type="text" className="Password-input"  value={curPassword} onChange={(e) => {setCurPassword(e.target.value)}}></input>
+                    <label className="Error-label"></label>
                     <button type='button' onClick={signUp}>Sign Up</button>
                 </form>
             </main>
