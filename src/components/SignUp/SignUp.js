@@ -36,9 +36,12 @@ function SignUp() {
 
     return (
         <div className="SignUp">
-            <main className="SignUp-container">
-                <form className="SignUp-form">
+            <main className="Form-container">
+                <form className="Form">
+                    <h1>Sign Up</h1>
+                    <label className="Form-label">Username:</label>
                     <input type="text" className="User-input" value={curUsername} onChange={(e) => {setCurUsername(e.target.value)}}></input>
+                    <label className="Form-label">Password:</label>
                     <input type="text" className="Password-input"  value={curPassword} onChange={(e) => {setCurPassword(e.target.value)}}></input>
                     <button type='button' onClick={signUp}>Sign Up</button>
                 </form>
