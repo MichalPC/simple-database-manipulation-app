@@ -1,7 +1,7 @@
 import './SignUp.css';
 import '../../App.css'
 import { useHistory } from 'react-router-dom'
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 function SignUp() {
     const [curUsername, setCurUsername] = useState('')
