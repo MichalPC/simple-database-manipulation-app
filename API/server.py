@@ -1,7 +1,7 @@
 #pylint: disable=no-name-in-module
 #pylint: disable=no-self-argument
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pymongo import MongoClient
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
