@@ -66,6 +66,7 @@ async def signUp(newUser: NewUser):
     userExists = collection.find({"username": newUser.username})
 
     if(userExists.count() == 1):
+        raise HTTPException(status_code=422, detail="Username has been taken!")
     else:
         collection.insert({
             "username": newUser.username,
