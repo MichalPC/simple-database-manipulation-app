@@ -26,11 +26,7 @@ function SignUp() {
         if (result.detail){
             console.log(result.detail)
         }else {
-            if(result.signup){
             history.push('/login')
-            } else {
-            console.log('Try again')
-            }
         }
         })
     }
