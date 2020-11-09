@@ -36,11 +36,7 @@ function Login() {
         setError(result.detail)
         console.log(result.detail)
       }else {
-        if(result.login){
-          console.log('Successful Login!')
-        } else {
-          console.log('Try again')
-        }
+        console.log('Successful Login!')
       }
     })
   }
