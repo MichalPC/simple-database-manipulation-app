@@ -23,8 +23,8 @@ function SignUp() {
         })
         .then(result => result.json())
         .then(result => {
-        if (result.err){
-            console.log(result.err)
+        if (result.detail){
+            console.log(result.detail)
         }else {
             if(result.signup){
             history.push('/login')
