@@ -40,7 +40,7 @@
 
 .Login-form input {
     color:black;
-    border: none;
+    border: 3px solid rgb(134, 134, 134);
     text-decoration: none;
     outline: none;
     border-radius: 30px;
